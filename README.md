@@ -19,9 +19,10 @@ Edit ```~/.spacemacs```:
 
 ```
 (defun dotspacemacs/layers ()
-  (setq-default
-    ...
-    (spacemacs-spaceline :location local)
-    ...
-))
+  (setq-default dotspacemacs-configuration-layers
+    '(
+      ...
+      (spacemacs-spaceline :location local)
+      ...
+    )))
 ```
