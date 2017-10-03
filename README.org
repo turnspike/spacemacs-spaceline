@@ -1,40 +1,32 @@
 #+TITLE: spacemacs-spaceline layer
 
-Extracted from https://github.com/domtronn/spaceline-all-the-icons.el/issues/31
-https://github.com/domtronn/spaceline-all-the-icons.el
+Extracted from:
+* https://github.com/domtronn/spaceline-all-the-icons.el/issues/31
 
-# The maximum height of the logo should be 200 pixels.
-[[img/spacemacs-spaceline.png]]
+https://github.com/domtronn/spaceline-all-the-icons.el/raw/master/logo.png
 
 # TOC links should be GitHub style anchors.
-* Table of Contents                                        :TOC_4_gh:noexport:
+* Table of Contents                                        :TOC_4_gh:noexport:k
 - [[#description][Description]]
-  - [[#features][Features:]]
 - [[#install][Install]]
-- [[#key-bindings][Key bindings]]
 
 * Description
-This layer adds support for something.
-
-** Features:
-  - Autocomplete
-  - Lint
-  - Refactor
-  - ...
+Use the Spaceline modeline in Spacemacs.
 
 * Install
-To use this configuration layer, add it to your =~/.spacemacs=. You will need to
-add =spacemacs-spaceline= to the existing =dotspacemacs-configuration-layers= list in this
-file.
 
-* Key bindings
+Clone into Spacemacs private directory:
+```
+git clone https://github.com/turnspike/spacemacs-spaceline.git ~/.emacs.d/private/spacemacs-spaceline
+```
 
-| Key Binding | Description    |
-|-------------+----------------|
-| ~SPC x x x~ | Does thing01   |
+Edit ```~/.spacemacs```:
 
-# Use GitHub URLs if you wish to link a Spacemacs documentation file or its heading.
-# Examples:
-# [[https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org#sessions]]
-# [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bfun/emoji/README.org][Link to Emoji layer README.org]]
-# If space-doc-mode is enabled, Spacemacs will open a local copy of the linked file.
+```
+(defun dotspacemacs/layers ()
+  (setq-default
+    ...
+    (spacemacs-spaceline :location local)
+    ...
+))
+```
